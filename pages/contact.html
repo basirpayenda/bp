@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <link rel="stylesheet" href="../css/style.css" />
+    <title>Contact</title>
+  </head>
+  <body>
+    <!-- Navigation bar -->
+    <header id="header">
+      <div class="logo">
+        <a href="../index.html">
+          <img src="../imgs/logo-fill.png" class="logo-img" alt="" />
+        </a>
+      </div>
+      <div class="burger-menu">
+        <div class="bar"></div>
+      </div>
+      <nav id="nav-menu">
+        <ul class="nav">
+          <li class="nav-item">
+            <a href="../index.html" class="nav-link">Home</a>
+          </li>
+          <li class="nav-item">
+            <a href="../index.html" class="nav-link">Projects</a>
+          </li>
+          <li class="nav-item">
+            <a href="pages/gallery.html" class="nav-link">YouTube Channel</a>
+          </li>
+          <li class="nav-item">
+            <a href="pages/contact.html" class="nav-link active">Contact</a>
+          </li>
+        </ul>
+      </nav>
+    </header>
+    <br />
+    <br />
+    <!-- contact form -->
+    <div class="w-90 mt-2">
+      <h1 class="contact-title">Contact</h1>
+      <form action="#" method="POST" class="contact">
+        <div class="field">
+          <label for="fullname">Full name</label>
+          <input
+            type="text"
+            class="field-input"
+            name="fullname"
+            id="fullname"
+            placeholder="John Doe"
+          />
+        </div>
+        <div class="field">
+          <label for="email">Email</label>
+          <input
+            type="email"
+            class="field-input"
+            name="email"
+            id="email"
+            placeholder="john.doe@company.com"
+          />
+        </div>
+        <div class="field">
+          <label for="message">Message</label>
+          <textarea
+            name="message"
+            class="field-input"
+            id="message"
+            cols="30"
+            rows="5"
+          ></textarea>
+        </div>
+        <input type="submit" value="Submit" class="btn btn-contact" />
+      </form>
+    </div>
+    <br />
+    <!-- footer -->
+    <footer>
+      <section id="contact">
+        <h1>Start a project</h1>
+        <p>
+          Interested in working together? We should queue up a chat. I'll buy a
+          cup of tea.
+        </p>
+        <button class="btn btn-contact">Let's Chat</button>
+      </section>
+      <span class="bar"></span>
+      <br />
+      <img src="../imgs/logo.png" class="footer-logo" alt="" />
+      Living, learning & leveling up one day at a time.
+
+      <div class="icons">
+        <i class="fab fa-whatsapp"></i>
+        <a href="https://www.youtube.com/channel/UCadrxrXig5YO4ub31jWRO3g"
+          ><i class="fab fa-youtube"></i
+        ></a>
+        <i class="fab fa-facebook"></i>
+        <a href="https://www.instagram.com/basir__payenda/">
+          <i class="fab fa-instagram"></i>
+        </a>
+      </div>
+      <h3>Powered by Basir Payenda</h3>
+    </footer>
+
+    <!-- bottom To top Button -->
+    <a href="#header" class="toTopBtn"
+      ><i class="fas fa-arrow-alt-circle-up"></i
+    ></a>
+
+    <script src="../js/script.js"></script>
+  </body>
+</html>
