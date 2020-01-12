@@ -1,20 +1,28 @@
 /***********************************
             Navigation bar 
  ***********************************/
+.hide-sm {
+  display: none;
+}
+
 .burger-menu {
+  position: absolute;
+  top: 1rem;
+  right: 2rem;
+  height: 2rem;
+  width: auto;
   cursor: pointer;
   z-index: 9;
   /* "open" on click */
 }
 
 .burger-menu .bar {
-  position: absolute;
-  top: 2rem;
-  right: 1.5rem;
   width: 33px;
   height: 3px;
   border-radius: 5px;
   background-color: #7610f8;
+  position: relative;
+  top: 0.8rem;
   -webkit-transition: all 0.5s ease-in-out;
   transition: all 0.5s ease-in-out;
 }
@@ -208,8 +216,12 @@ ul {
   border: 1px solid #bbb;
 }
 
-.border {
-  border: 1px solid blue;
+.primary-clr {
+  color: #7610f8;
+}
+
+.secondary-clr {
+  color: #f3f3f3;
 }
 
 /***********************************
@@ -549,8 +561,259 @@ footer h3 img {
   transition: all 0.4s ease-in-out;
 }
 
+/* Recommended Books section */
+.books_title {
+  text-align: center;
+  padding: 0.5rem 0;
+  background-color: #7610f8;
+  color: #d6cce2;
+  border-bottom: 1px solid #ccc;
+}
+
+.books_title div {
+  font-size: 5rem;
+}
+
+/* swiper for books */
+.swiper-container {
+  width: 100%;
+  height: 100%;
+  padding-left: 0.5rem;
+}
+
+.swiper-slide {
+  text-align: center;
+  font-size: 18px;
+  background: #fff;
+  /* Center slide text vertically */
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+.swiper-container-horizontal > .swiper-pagination-bullets,
+.swiper-pagination-custom,
+.swiper-pagination-fraction {
+  bottom: 0px;
+}
+
+/* YouTube Page */
+.videos-showcase {
+  background: url(../imgs/YouTube.jpg) center/cover no-repeat;
+  min-height: 60vh;
+  margin-bottom: 1rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
+  color: #f3f3f3;
+}
+
+.videos-showcase #typed {
+  background-color: rgba(0, 0, 0, 0.3);
+  padding: 0.5rem;
+  border-radius: 7px;
+  margin-bottom: 10vh;
+}
+
+/* video gallery */
+#video-gallery {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (1fr)[1];
+      grid-template-columns: repeat(1, 1fr);
+  grid-gap: 0.5rem;
+  padding: 0.3rem 0.5rem;
+}
+
+#video-gallery a img {
+  border-radius: 7px;
+  padding: 3px;
+  border: 1px solid #bbb;
+  -webkit-box-shadow: 0 0 10px 2px #333;
+          box-shadow: 0 0 10px 2px #333;
+}
+
+/* ******************
+    About Page - intro section 
+**********************/
+.intro {
+  position: relative;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr;
+      grid-template-columns: 1fr;
+      grid-template-areas: "hero-title" "hero-picture" "hero-paragraph";
+  overflow-x: hidden;
+  width: 80%;
+  margin: 0 auto;
+}
+
+.intro__title {
+  color: #f3f3f3;
+  -ms-grid-row: 1;
+  -ms-grid-column: 1;
+  grid-area: hero-title;
+  text-align: center;
+  padding: 2em;
+  border-radius: 2em;
+}
+
+.intro__title::after {
+  content: "";
+  background-image: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  position: absolute;
+  top: -0.5rem;
+  left: -10rem;
+  right: -10rem;
+  bottom: -10rem;
+  z-index: -1;
+  grid-column: 1/-1;
+  -ms-grid-row: 1;
+  -ms-grid-row-span: 1;
+  grid-row: 1/2;
+}
+
+.intro__picture {
+  margin: 0 4em;
+  -ms-grid-row: 2;
+  -ms-grid-column: 1;
+  grid-area: hero-picture;
+  width: 70vw;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+.intro__image {
+  grid-area: hero-img;
+  border-radius: 28px;
+  -webkit-box-shadow: 0 0 12px rgba(0, 0, 0, 0.5);
+          box-shadow: 0 0 12px rgba(0, 0, 0, 0.5);
+  padding: 0.5em;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+.intro__paragraph {
+  -ms-grid-row: 3;
+  -ms-grid-column: 1;
+  grid-area: hero-paragraph;
+  grid-column: 1/-1;
+  padding: 1.5em;
+}
+
+/* ***********************************
+    About Page - intro section 
+**************************************/
+@media only screen and (min-width: 40em) {
+  .intro {
+    margin-top: 2rem;
+    overflow: initial;
+    /* padding: 1em; */
+    -ms-grid-columns: 2em min-content minmax(300px, 900px) 2em;
+        grid-template-columns: 2em -webkit-min-content minmax(300px, 900px) 2em;
+        grid-template-columns: 2em min-content minmax(300px, 900px) 2em;
+        grid-template-areas: ". hero-picture hero-title . " ". hero-picture hero-paragraph .";
+  }
+  .intro__title {
+    font-size: 3vw;
+    padding: 0px;
+  }
+  .intro__title::after {
+    -ms-grid-column: 2;
+    -ms-grid-column-span: 2;
+    grid-column: 2/4;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    border-radius: 28px;
+  }
+  .intro__picture {
+    width: 35vw;
+    height: 60vh;
+    max-width: 250px;
+    max-height: 350px;
+    margin: 3em;
+  }
+  .intro__image {
+    width: 35vw;
+    height: 60vh;
+    max-width: 250px;
+    max-height: 350px;
+  }
+  .intro__paragraph {
+    -ms-grid-column: 3;
+    -ms-grid-column-span: 1;
+    grid-column: 3/4;
+  }
+}
+
 @media screen and (min-width: 992px) {
+  .hide-lg {
+    display: none;
+  }
   /***********************************
+                Header
+    ***********************************/
+  .burger-menu {
+    display: none;
+  }
+  header {
+    position: fixed;
+    top: 0;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    padding: 1.5vh 5vw;
+    background-color: #7610f8;
+    -webkit-box-shadow: 0 1px 5px #888;
+            box-shadow: 0 1px 5px #888;
+    -webkit-transition: all 0.5s ease-in-out;
+    transition: all 0.5s ease-in-out;
+    z-index: 9;
+  }
+  header nav {
+    position: static;
+    width: auto;
+    height: auto;
+    -webkit-transform: translate3d(0, 0, 0);
+            transform: translate3d(0, 0, 0);
+    background-color: transparent;
+  }
+  header nav .nav {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    font-size: 1.5rem;
+  }
+  header nav .nav .nav-item {
+    padding: 0 1rem;
+  }
+  header nav .nav .nav-link {
+    padding: 2rem 0;
+    color: #f3f3f3;
+    font-weight: 600;
+  }
+  .shrinkheader {
+    padding: 0vh 5vw;
+  }
+  /***********************************  
                 showcase
     ***********************************/
   .showcase {
@@ -669,93 +932,61 @@ footer h3 img {
         grid-template-columns: repeat(3, 1fr);
     width: 93%;
     margin: 0 auto;
-    background-image: linear-gradient(135deg, #fdfcfb 0%, #e2d1c3 100%);
     border-radius: 0.5rem;
     padding: 2rem 0.7rem;
   }
-}
-
-/* Recommended Books section */
-.books_title {
-  text-align: center;
-  padding: 0.5rem 0;
-  background-color: #7610f8;
-  color: #d6cce2;
-  border-bottom: 1px solid #ccc;
-}
-
-.books_title div {
-  font-size: 5rem;
-}
-
-/* swiper for books */
-.swiper-container {
-  width: 100%;
-  height: 100%;
-  padding-left: 0.5rem;
-}
-
-.swiper-slide {
-  text-align: center;
-  font-size: 18px;
-  background: #fff;
-  /* Center slide text vertically */
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-  -ms-flex-pack: center;
-  justify-content: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-}
-
-.swiper-container-horizontal > .swiper-pagination-bullets,
-.swiper-pagination-custom,
-.swiper-pagination-fraction {
-  bottom: 0px;
-}
-
-/* YouTube Page */
-.videos-showcase {
-  background: url(../imgs/YouTube.jpg) center/cover no-repeat;
-  min-height: 60vh;
-  margin-bottom: 1rem;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: end;
-      -ms-flex-align: end;
-          align-items: flex-end;
-  color: #f3f3f3;
-}
-
-.videos-showcase #typed {
-  background-color: rgba(0, 0, 0, 0.3);
-  padding: 0.5rem;
-  border-radius: 7px;
-  margin-bottom: 10vh;
-}
-
-/* video gallery */
-#video-gallery {
-  display: -ms-grid;
-  display: grid;
-  -ms-grid-columns: (1fr)[1];
-      grid-template-columns: repeat(1, 1fr);
-  grid-gap: 0.5rem;
-  padding: 0.3rem 0.5rem;
-}
-
-#video-gallery a img {
-  border-radius: 7px;
-  padding: 3px;
-  border: 1px solid #bbb;
-  -webkit-box-shadow: 0 0 10px 2px #333;
-          box-shadow: 0 0 10px 2px #333;
+  /***********************************
+                video gallery
+ ***********************************/
+  #video-gallery {
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: (1fr)[3];
+        grid-template-columns: repeat(3, 1fr);
+    grid-gap: 2rem;
+    padding: 0.3rem 0.5rem;
+    width: 80%;
+    margin: 0 auto;
+  }
+  #video-gallery a img {
+    border-radius: 7px;
+    padding: 3px;
+    border: 1px solid #bbb;
+    -webkit-box-shadow: 0 0 10px 2px #333;
+            box-shadow: 0 0 10px 2px #333;
+  }
+  /* YouTube Page */
+  .videos-showcase {
+    background: url(../imgs/YouTube.jpg) center/cover no-repeat;
+    min-height: 60vh;
+    margin-bottom: 1rem;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: end;
+        -ms-flex-align: end;
+            align-items: flex-end;
+    color: #f3f3f3;
+  }
+  .videos-showcase #typed {
+    background-color: rgba(0, 0, 0, 0.3);
+    padding: 0.5rem;
+    border-radius: 7px;
+    margin-bottom: 10vh;
+  }
+  /* book recommendation section */
+  .swiper-container {
+    width: 80%;
+    height: 100%;
+    margin: 0 auto;
+    padding-left: 0.5rem;
+  }
+  /* footer section */
+  footer #contact {
+    width: 50%;
+  }
 }
 /*# sourceMappingURL=style.css.map */

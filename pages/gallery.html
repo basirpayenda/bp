@@ -21,23 +21,33 @@
     <!-- custom css -->
     <link rel="stylesheet" href="../css/style.css" />
     <style>
-        .burger-menu .bar {
-            background-color: #f3f3f3;
+      .burger-menu .bar {
+        background-color: #f3f3f3;
+      }
+      .burger-menu .bar:before {
+        background-color: #f3f3f3;
+      }
+      .burger-menu .bar:after {
+        background-color: #f3f3f3;
+      }
+      /* @media screen and (min-width: 992px) {
+        header {
+          position: fixed;
+          top: 0;
+          background-color: #7610f8;
         }
-        .burger-menu .bar:before {
-            background-color: #f3f3f3;
+        header nav .nav .nav-link {
+          color: #f3f3f3;
         }
-        .burger-menu .bar:after {
-            background-color: #f3f3f3;
-        }
+      } */
     </style>
     <title>Basir Payenda</title>
   </head>
   <body>
     <!-- Navigation bar -->
-    <header id="header">
+    <header class="header">
       <div class="logo">
-        <img src="imgs/logo-fill.png" class="logo-img" alt="" />
+        <img src="../imgs/logo.png" class="logo-img" alt="" />
       </div>
       <div class="burger-menu">
         <div class="bar"></div>
@@ -48,13 +58,16 @@
             <a href="../index.html" class="nav-link">Home</a>
           </li>
           <li class="nav-item">
-            <a href="#project" class="nav-link">Projects</a>
+            <a href="" class="nav-link">Projects</a>
           </li>
           <li class="nav-item">
-            <a href="pages/gallery.html" class="nav-link">YouTube Channel</a>
+            <a href="#" class="nav-link active">YouTube</a>
           </li>
           <li class="nav-item">
-            <a href="pages/contact.html" class="nav-link">Contact</a>
+            <a href="contact.html" class="nav-link">Contact</a>
+          </li>
+          <li class="nav-item">
+            <a href="about.html" class="nav-link">About Me</a>
           </li>
         </ul>
       </nav>
@@ -82,16 +95,16 @@
 
       <a
         href="https://www.youtube.com/watch?v=Sy7e7B38P9I"
-        data-poster="../imgs/setup py on vscode.png"
+        data-poster="../imgs/python-on-vscode.jpg"
       >
-        <img src="../imgs/setup py on vscode.png" width="200px" />
+        <img src="../imgs/python-on-vscode.jpg" width="200px" />
       </a>
 
       <a
         href="https://www.youtube.com/watch?v=0yK7TfwKXhs"
-        data-poster="../imgs/python string.png"
+        data-poster="../imgs/python-string.jpg"
       >
-        <img src="../imgs/python string.png" width="200px" />
+        <img src="../imgs/python-string.jpg" width="200px" />
       </a>
     </div>
 
@@ -135,6 +148,8 @@
     <!-- A jQuery plugin that adds cross-browser mouse wheel support. (Optional) -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-
     mousewheel/3.1.13/jquery.mousewheel.min.js"></script>
+    <script src="../vendors/owl.carousel.min.js"></script>
+    <script src="../vendors/swiper.min.js"></script>
     <script src="../vendors/lightgallery.min.js"></script>
     <script src="../vendors/lightgallery-all.min.js"></script>
     <script src="../vendors/lg-fullscreen.min.js"></script>
@@ -148,14 +163,13 @@
       $("#video-gallery").lightGallery();
       var typed = new Typed("#typed", {
         strings: [
-          "Welcome to my YT videos",
-          "I upload tutorials here",
-          "Scroll down and watch ..." // ^5000 waits 5000 milli secs after completion to next start
+          "Hey, Basir here",
+          "Scroll down and watch my recent tutorials ..." // ^5000 waits 5000 milli secs after completion to next start
         ],
 
         stringsElement: "#elem",
         typeSpeed: 50,
-        startDelay: 1500,
+        startDelay: 500,
         backSpeed: 20,
         smartBackspace: true,
 

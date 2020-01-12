@@ -42,6 +42,8 @@ $("a[href*='#']").on("click", function(e) {
 // bottom to Top button
 window.onscroll = function() {
   toTopBtn = document.querySelector(".toTopBtn");
+  header = document.querySelector(".header");
+  console.log("header");
 
   if (
     document.body.scrollTop > 200 ||
@@ -50,6 +52,14 @@ window.onscroll = function() {
     toTopBtn.style.display = "block";
   } else {
     toTopBtn.style.display = "none";
+  }
+  if (
+    document.body.scrollTop > 150 ||
+    document.documentElement.scrollTop > 150
+  ) {
+    header.classList.add("shrinkheader");
+  } else {
+    header.classList.remove("shrinkheader");
   }
 };
 
@@ -64,5 +74,21 @@ var swiper = new Swiper(".swiper-container", {
   }
 });
 
-/* light gallery */
+function resizeBookRec(x) {
+  if (x.matches) {
+    var swiper = new Swiper(".swiper-container", {
+      slidesPerView: 4,
+      spaceBetween: 30,
+      freeMode: true,
+      pagination: {
+        el: ".swiper-pagination",
+        clickable: true
+      }
+    });
+  }
+}
 
+var x = window.matchMedia("(min-width: 992px)");
+resizeBookRec(x); // Call listener function at run time
+x.addListener(resizeBookRec); // Attach listener function on state changes
+console.log("end");

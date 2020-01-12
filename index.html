@@ -24,11 +24,12 @@
     <link rel="stylesheet" href="css/style.css" />
     <title>Basir Payenda</title>
   </head>
+
   <body>
     <!-- Navigation bar -->
-    <header id="header">
+    <header class="header">
       <div class="logo">
-        <img src="imgs/logo-fill.png" class="logo-img" alt="" />
+        <img src="imgs/logo.png" class="logo-img" alt="" />
       </div>
       <div class="burger-menu">
         <div class="bar"></div>
@@ -40,10 +41,13 @@
             <a href="#project" class="nav-link">Projects</a>
           </li>
           <li class="nav-item">
-            <a href="pages/gallery.html" class="nav-link">YouTube Channel</a>
+            <a href="pages/gallery.html" class="nav-link">YouTube</a>
           </li>
           <li class="nav-item">
             <a href="pages/contact.html" class="nav-link">Contact</a>
+          </li>
+          <li class="nav-item">
+            <a href="pages/about.html" class="nav-link">About Me</a>
           </li>
         </ul>
       </nav>
@@ -109,7 +113,8 @@
         <h2 class="tools">Tools I use</h2>
         <ul>
           <li>Adobe Indesign</li>
-          <li>Photoshop</li>
+          <li>Adobe Illustrator</li>
+          <li>Adobe Photoshop</li>
           <li>Sketch</li>
           <li>Pen and Paper</li>
         </ul>
@@ -127,13 +132,15 @@
         <p>HTML, CSS, SCSS, JavaScript</p>
         <h2 class="tools">Dev Tools</h2>
         <ul>
-          <li>Bootstrap</li>
+          <li>Bootstrap 3</li>
+          <li>Bootstrap 4</li>
           <li>Git</li>
           <li>GitHub</li>
           <li>Bitbucket</li>
           <li>VS Code</li>
           <li>Codepen</li>
           <li>JQuery</li>
+          <li>ReactJS</li>
           <li>Terminal</li>
         </ul>
       </div>
@@ -167,15 +174,15 @@
       </div>
       <div class="row">
         <div class="col">
-          <img src="imgs/bashirproject.jpg" alt="" />
+          <img src="imgs/ecommerce-project.jpg" alt="" />
           <div class="overlay">
             <div class="overlay-inner">
               <p>Lorem ipsum dolor sit amet.</p>
               <a href="#" class="btn btn-github"
                 ><i class="fab fa-github"></i> Github</a
               >
-              <a href="#" class="btn btn-visit"
-                ><i class="fas fa-eye"></i> Visit</a
+              <a href="#" class="btn btn-visit">
+                <i class="fas fa-eye"></i> Visit</a
               >
             </div>
           </div>
@@ -194,22 +201,9 @@
             </div>
           </div>
         </div>
-        <div class="col">
-          <img src="imgs/ecommerce-project.jpg" alt="" />
-          <div class="overlay">
-            <div class="overlay-inner">
-              <p>Lorem ipsum dolor sit amet.</p>
-              <a href="#" class="btn btn-github"
-                ><i class="fab fa-github"></i> Github</a
-              >
-              <a href="#" class="btn btn-visit">
-                <i class="fas fa-eye"></i> Visit</a
-              >
-            </div>
-          </div>
-        </div>
       </div>
     </section>
+
     <!-- Contact -->
 
     <!-- Recommended Books -->
@@ -255,7 +249,7 @@
           Interested in working together? We should queue up a chat. I'll buy a
           cup of tea.
         </p>
-        <button class="btn btn-contact">Let's Chat</button>
+        <a href="pages/contact.html" class="btn btn-contact">Chat</a>
       </section>
       <span class="bar"></span>
       <br />
@@ -273,7 +267,6 @@
         <a href="https://www.quora.com/profile/Basir-Payenda-3">
           <i class="fab fa-quora"></i>
         </a>
-
       </div>
       <h3>Powered by Basir Payenda</h3>
     </footer>
