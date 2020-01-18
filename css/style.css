@@ -986,10 +986,11 @@ footer h3 img {
   }
   /* footer section */
   footer #contact {
-    width: 50%;
+    width: 40%;
   }
   /* about page */
   .intro {
+    top: 5vh;
     width: 80%;
     margin: 0 auto;
   }
