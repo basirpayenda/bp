@@ -210,10 +210,14 @@ ul {
   background-color: #f3f3f3;
   padding: 0.3rem 1rem;
   border-radius: 5px;
-  display: inline-block;
   margin: 0.2rem 0;
-  width: 50%;
+  width: 100%;
   border: 1px solid #bbb;
+}
+
+.btn-github {
+  display: block;
+  white-space: nowrap;
 }
 
 .primary-clr {
@@ -353,6 +357,23 @@ ul {
 .project .row img,
 .project .row .overlay {
   border-radius: 7px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.project .row .col ul,
+.project .row img ul,
+.project .row .overlay ul {
+  text-align: left;
+  list-style-type: decimal-leading-zero;
+  margin: 1em 0;
+  font-family: Rajdhani, Arial, Helvetica, sans-serif;
+  font-size: 1.2rem;
 }
 
 .project .row .col {
